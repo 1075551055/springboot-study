@@ -30,7 +30,6 @@
             <scope>test</scope>
         </dependency>
 
-
         <!--添加热部署-->
         <!--    1 - Adding devtools to your project
                 <dependency>
