@@ -19,5 +19,15 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     runtimeOnly 'com.h2database:h2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
+//    implementation 'org.springframework.boot:spring-boot-starter-security'
+}
+//
+//configurations {
+//    all*.exclude group:'org.springframework.boot',
+//            module:'spring-boot-starter-logging'
+//}
+
+//activite application-development.properties
+bootRun{
+    environment spring_profiles_active: environment.spring_profiles_active ?: "development"
 }
