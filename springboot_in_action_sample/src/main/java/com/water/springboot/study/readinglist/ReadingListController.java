@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/readingList")
 //表示该controller的属性是通过配置属性（application.properties）进行注入的，前缀是amazon
 @ConfigurationProperties(prefix = "amazon")
 public class ReadingListController {
@@ -41,6 +41,6 @@ public class ReadingListController {
     public String addToReadingList(@PathVariable("reader") String reader, Book book){
         book.setReader(reader);
         readlingListRepository.save(book);
-        return "redirect:/{reader}";
+        return "redirect:/readingList/{reader}";
     }
 }
